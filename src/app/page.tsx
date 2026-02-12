@@ -47,7 +47,7 @@ export default function Home() {
                    exit={{ opacity: 0, y: -10 }}
                    transition={{ duration: 0.3 }}
                  >
-                   <Hero />
+                   <Hero onContactClick={() => setActiveTab("contact")} />
                  </motion.div>
                )}
 
