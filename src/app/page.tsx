@@ -15,6 +15,14 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Home() {
   const [activeTab, setActiveTab] = useState("home");
   const { t } = useLanguage();
+  const contentRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    // Scroll content container to top
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  }, [activeTab]);
 
   return (
     <div className="container mx-auto p-2 lg:p-4 min-h-[100dvh] lg:h-[100dvh] lg:overflow-hidden">
@@ -36,7 +44,7 @@ export default function Home() {
 
 
           {/* Content Cards - Tabbed View */}
-          <div className="flex-1 bg-card/80 backdrop-blur-xl p-2 sm:p-4 relative lg:overflow-y-auto hidden-scrollbar">
+          <div ref={contentRef} className="flex-1 bg-card/80 backdrop-blur-xl p-2 sm:p-4 relative lg:overflow-y-auto hidden-scrollbar">
              
              <AnimatePresence mode="wait">
                {activeTab === "home" && (
