@@ -100,7 +100,7 @@ export const content: Record<Language, Content> = {
       home: "Ana Sayfa",
       about: "Hakkımda",
       experience: "Deneyim",
-      projects: "Projeler",
+      projects: "Portfolio",
       contact: "İletişim",
       downloadCV: "Özgeçmiş İndir"
     },
@@ -189,7 +189,7 @@ export const content: Record<Language, Content> = {
       ]
     },
     portfolio: {
-      title: "Portfolyo",
+      title: "Portfolio",
       projects: [
         {
           title: "OCPP Dashboard",
@@ -315,7 +315,7 @@ export const content: Record<Language, Content> = {
       home: "Home",
       about: "About",
       experience: "Experience",
-      projects: "Projects",
+      projects: "Portfolio",
       contact: "Contact",
       downloadCV: "Download CV"
     },
