@@ -22,6 +22,7 @@ export default function Home() {
     if (contentRef.current) {
       contentRef.current.scrollTop = 0;
     }
+    window.scrollTo(0, 0);
   }, [activeTab]);
 
   return (
