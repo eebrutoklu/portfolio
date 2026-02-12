@@ -15,14 +15,20 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Home() {
   const [activeTab, setActiveTab] = useState("home");
   const { t } = useLanguage();
-  const contentRef = React.useRef<HTMLDivElement>(null);
+  const mainRef = React.useRef<HTMLElement>(null);
 
   React.useEffect(() => {
-    // Scroll content container to top
+    // Scroll content container to top (for desktop/inner scroll)
     if (contentRef.current) {
       contentRef.current.scrollTop = 0;
     }
-    window.scrollTo(0, 0);
+    
+    // For mobile: scroll to make the main content area visible (starts at TopMenu)
+    // We check window.innerWidth to apply this only on mobile/tablet
+    if (window.innerWidth < 1024 && mainRef.current) {
+       // Scroll smoothly to the start of the main section
+       mainRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }, [activeTab]);
 
   return (
@@ -34,6 +40,7 @@ export default function Home() {
 
         {/* Right Content Area */}
         <motion.main 
+          ref={mainRef}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
