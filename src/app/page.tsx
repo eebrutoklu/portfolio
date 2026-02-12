@@ -16,6 +16,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("home");
   const { t } = useLanguage();
   const mainRef = React.useRef<HTMLElement>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     // Scroll content container to top (for desktop/inner scroll)
