@@ -1,71 +1,71 @@
 # Ebru Toklu - Portfolio Website
 
-Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, çok dilli (Türkçe, İngilizce, Arapça, Rusça) desteğine sahip, kişisel bir portfolyo web sitesidir.
+This project is a personal portfolio website developed using modern web technologies, featuring multi-language support (Turkish, English, Arabic, Russian).
 
-## 🚀 Teknolojiler
+## 🚀 Technologies
 
 - **Framework:** [Next.js 16](https://nextjs.org/) (App Directory)
-- **Dil:** [TypeScript](https://www.typescriptlang.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **Animasyon:** [Framer Motion](https://www.framer.com/motion/)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
 - **Form & Captcha:** EmailJS & Cloudflare Turnstile
-- **İkonlar:** Lucide React, React Icons
+- **Icons:** Lucide React, React Icons
 
-## ✨ Proje Özellikleri
+## ✨ Project Features
 
-- **🌍 Çoklu Dil Desteği:** 4 farklı dil seçeneği ile (TR, EN, AR, RU) global erişilebilirlik.
-- **🌗 Tema Yönetimi:** Kullanıcı tercihine dayalı Aydınlık (Light) ve Karanlık (Dark) mod geçişleri.
-- **⚡ Dinamik İçerik:** Tüm metinler ve veri yapıları `content.ts` üzerinden kolayca yönetilebilir.
-- **✉️ İletişim Formu:** EmailJS entegrasyonu ile sunucusuz e-posta gönderimi ve **Cloudflare Turnstile** ile spam koruması.
-- **📱 Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarda kusursuz çalışan esnek arayüz.
-- **🎨 Modern UI/UX:** Özel fontlar (Rouge Script, Special Elite), cam efekti (Glassmorphism) ve yumuşak geçişler.
-- **🔄 Animasyonlu Sidebar:** Profil fotoğrafı ve logo arasında geçiş yapabilen, sosyal medya bağlantılarını içeren etkileşimli yan menü.
-- **📄 CV İndirme:** Seçili dile uygun özgeçmiş dosyasını (PDF) doğrudan indirme imkanı.
+- **🌍 Multi-Language Support:** Global accessibility with 4 language options (TR, EN, AR, RU).
+- **🌗 Theme Management:** User-preference based Light and Dark mode switching.
+- **⚡ Dynamic Content:** All text and data structures are easily managed via `content.ts`.
+- **✉️ Contact Form:** Serverless email sending with EmailJS integration and spam protection via **Cloudflare Turnstile**.
+- **📱 Responsive Design:** Flexible interface that works flawlessly on mobile, tablet, and desktop devices.
+- **🎨 Modern UI/UX:** Custom fonts (Rouge Script, Special Elite), Glassmorphism effects, and smooth transitions.
+- **🔄 Animated Sidebar:** Interactive sidebar featuring a toggle between profile photo and logo, along with social media links.
+- **📄 CV Download:** Direct download of the resume (PDF) in the selected language.
 
-## 🛠️ Kurulum ve Çalıştırma Rehberi
+## 🛠️ Installation and Setup Guide
 
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edin.
+Follow these steps to run the project on your local machine.
 
-### 1. Ön Hazırlık
+### 1. Prerequisites
 
-Bilgisayarınızda [Node.js](https://nodejs.org/) (v20 veya üzeri önerilir) kurulu olmalıdır.
+You must have [Node.js](https://nodejs.org/) (v20 or higher recommended) installed on your computer.
 
-### 2. Projeyi Klonlayın
+### 2. Clone the Project
 
 ```bash
 git clone https://github.com/eebrutoklu/portfolio.git
 cd portfolio
 ```
 
-### 3. Bağımlılıkları Yükleyin
+### 3. Install Dependencies
 
 ```bash
 npm install
-# veya
+# or
 yarn install
-# veya
+# or
 pnpm install
 ```
 
-### 4. Çevre Değişkenlerini (.env) Ayarlayın
+### 4. Configure Environment Variables (.env)
 
-Projenin düzgün çalışması (özellikle iletişim formu) için bazı API anahtarlarına ihtiyacı vardır.
+The project requires specific API keys to function correctly (especially the contact form).
 
-1.  Proje ana dizininde `.env.local.example` dosyasını bulun.
-2.  Bu dosyanın adını `.env.local` olarak değiştirin veya kopyasını oluşturun.
-3.  İçerisindeki değerleri kendi API anahtarlarınızla doldurun:
+1.  Find the `.env.local.example` file in the project root directory.
+2.  Rename this file to `.env.local` or create a copy.
+3.  Fill in the values with your own API keys:
 
-**EmailJS Ayarları:**
-- [EmailJS](https://www.emailjs.com/) üzerinde bir hesap oluşturun.
-- Bir "Email Service" ekleyin (örneğin Gmail). -> `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
-- Bir "Email Template" oluşturun. -> `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
-- Hesap ayarlarından Public Key'inizi alın. -> `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
+**EmailJS Settings:**
+- Create an account at [EmailJS](https://www.emailjs.com/).
+- Add an "Email Service" (e.g., Gmail). -> `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
+- Create an "Email Template". -> `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+- Get your Public Key from Account Settings. -> `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
 
-**Cloudflare Turnstile Ayarları:**
-- [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) üzerinden bir site oluşturun.
-- Site Key'inizi alın. -> `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
+**Cloudflare Turnstile Settings:**
+- Create a site at [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/).
+- Get your Site Key. -> `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
 
-**.env.local Dosyası Örneği:**
+**Example .env.local File:**
 
 ```ini
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_xyz123
@@ -76,39 +76,41 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=user_789publickey
 NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAAABBBCCCDDD
 ```
 
-### 5. Geliştirme Sunucusunu Başlatın
+### 5. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Tarayıcınızı açın ve [http://localhost:3000](http://localhost:3000) adresine gidin.
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-## 📦 Prodüksiyon İçin Derleme
+## ☁️ Deployment on Vercel
 
-Projeyi canlı ortama atmadan önce optimize edilmiş bir sürüm oluşturmak için:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-```bash
-npm run build
-npm start
-```
+1.  Push your code to a Git repository (GitHub, GitLab, BitBucket).
+2.  Import your project into Vercel.
+3.  **Important:** Add the environment variables (`NEXT_PUBLIC_EMAILJS_...`, etc.) in the Vercel Project Settings > Environment Variables section.
+4.  Click **Deploy**. Vercel will automatically detect Next.js and build your project.
 
-## 📂 Proje Yapısı
+For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
-- `src/app`: Sayfa yapıları ve yönlendirmeler (Next.js App Router).
-- `src/components`: Tekrar kullanılabilir UI bileşenleri (Button, Sidebar, Sections vb.).
-- `src/context`: Global state yönetimi (Theme, Language).
-- `src/data`: İçerik metinleri ve çeviriler (`content.ts`).
-- `public`: Görseller ve statik dosyalar.
+## 📂 Project Structure
 
-## 🤝 Katkıda Bulunma
+- `src/app`: Page structures and routing (Next.js App Router).
+- `src/components`: Reusable UI components (Button, Sidebar, Sections, etc.).
+- `src/context`: Global state management (Theme, Language).
+- `src/data`: Content text and translations (`content.ts`).
+- `public`: Images and static files.
 
-1.  Bu projeyi forklayın.
-2.  Yeni bir özellik dalı (feature branch) oluşturun (`git checkout -b ozellik/YeniOzellik`).
-3.  Değişikliklerinizi commit yapın (`git commit -m 'Yeni özellik eklendi'`).
-4.  Dalınızı push yapın (`git push origin ozellik/YeniOzellik`).
-5.  Bir Pull Request oluşturun.
+## 🤝 Contributing
+
+1.  Fork this project.
+2.  Create a new feature branch (`git checkout -b feature/NewFeature`).
+3.  Commit your changes (`git commit -m 'Add new feature'`).
+4.  Push to the branch (`git push origin feature/NewFeature`).
+5.  Create a Pull Request.
 
 ---
 
-**Geliştirici:** Ebru Toklu
+**Developer:** Ebru Toklu
