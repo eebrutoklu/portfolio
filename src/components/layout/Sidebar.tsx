@@ -128,32 +128,32 @@ export default function Sidebar() {
 
 
       <div className="w-full space-y-4 bg-muted/30 p-4 rounded-2xl mb-6">
-        <div className="flex items-center gap-4 text-left border-b border-border/50 pb-3 last:border-0 last:pb-0">
+        <div className={`flex items-center gap-4 ${language === 'ar' ? 'text-right' : 'text-left'} border-b border-border/50 pb-3 last:border-0 last:pb-0`}>
           <div className="p-2 bg-background shadow-sm rounded-lg text-primary">
             <Smartphone className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs text-muted-foreground">Phone</p>
-            <p className="text-sm font-medium">{t.contact.phone}</p>
+            <p className="text-xs text-muted-foreground">{t.contact.labels.phone}</p>
+            <p className="text-sm font-medium" dir="ltr">{t.contact.phone}</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-left border-b border-border/50 pb-3 last:border-0 last:pb-0">
+        <div className={`flex items-center gap-4 ${language === 'ar' ? 'text-right' : 'text-left'} border-b border-border/50 pb-3 last:border-0 last:pb-0`}>
           <div className="p-2 bg-background shadow-sm rounded-lg text-primary">
             <Mail className="h-5 w-5" />
           </div>
           <div className="overflow-hidden">
-            <p className="text-xs text-muted-foreground">Email</p>
+            <p className="text-xs text-muted-foreground">{t.contact.labels.email}</p>
             <p className="text-sm font-medium truncate" title={t.contact.email}>{t.contact.email}</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-left border-b border-border/50 pb-3 last:border-0 last:pb-0">
+        <div className={`flex items-center gap-4 ${language === 'ar' ? 'text-right' : 'text-left'} border-b border-border/50 pb-3 last:border-0 last:pb-0`}>
           <div className="p-2 bg-background shadow-sm rounded-lg text-primary">
             <MapPin className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs text-muted-foreground">Location</p>
+            <p className="text-xs text-muted-foreground">{t.contact.labels.location}</p>
             <p className="text-sm font-medium">{t.contact.location}</p>
           </div>
         </div>

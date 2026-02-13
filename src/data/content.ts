@@ -73,6 +73,11 @@ export interface Content {
       verify: string;
       failed: string;
     };
+    labels: {
+      phone: string;
+      email: string;
+      location: string;
+    };
   };
   nav: {
     home: string;
@@ -307,6 +312,11 @@ export const content: Record<Language, Content> = {
       captcha: {
         verify: "Lütfen insan olduğunuzu doğrulayın.",
         failed: "Doğrulama başarısız oldu, lütfen tekrar deneyin."
+      },
+      labels: {
+        phone: "Telefon",
+        email: "E-posta",
+        location: "Konum"
       }
     }
   },
@@ -522,6 +532,11 @@ export const content: Record<Language, Content> = {
       captcha: {
         verify: "Please verify you are human.",
         failed: "Verification failed, please try again."
+      },
+      labels: {
+        phone: "Phone",
+        email: "Email",
+        location: "Location"
       }
     }
   },
@@ -737,6 +752,11 @@ export const content: Record<Language, Content> = {
       captcha: {
         verify: "يرجى التحقق من أنك إنسان.",
         failed: "فشل التحقق، يرجى المحاولة مرة أخرى."
+      },
+      labels: {
+        phone: "الهاتف",
+        email: "البريد الإلكتروني",
+        location: "الموقع"
       }
     }
   },
@@ -952,6 +972,11 @@ export const content: Record<Language, Content> = {
       captcha: {
         verify: "Пожалуйста, подтвердите, что вы человек.",
         failed: "Ошибка проверки, попробуйте еще раз."
+      },
+      labels: {
+        phone: "Телефон",
+        email: "Email",
+        location: "Местоположение"
       }
     }
   }
