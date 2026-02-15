@@ -94,7 +94,7 @@ const commonData = {
   phone: " ",
   location: "Antalya, Turkey",
   socials: {
-    linkedin: "LinkedIn", // URL to be added
+    linkedin: "https://www.linkedin.com/in/eebrutoklu",
     github: "GitHub" // URL if available
   }
 };
