@@ -91,7 +91,7 @@ export interface Content {
 
 const commonData = {
   email: "eebrutoklu@outlook.com",
-  phone: "+90 544 408 14 02",
+  phone: " ",
   location: "Antalya, Turkey",
   socials: {
     linkedin: "LinkedIn", // URL to be added
@@ -267,7 +267,7 @@ export const content: Record<Language, Content> = {
         {
           name: "Yazılım & Geliştirme",
           items: [
-            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js", 
+            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js",
             "Redux", "Zustand", "Context API",
             "TanStack Query (React Query)", "React Hook Form + Zod/Yup",
             "HTML5", "CSS3", "Sass/SCSS",
@@ -487,7 +487,7 @@ export const content: Record<Language, Content> = {
         {
           name: "Development",
           items: [
-            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js", 
+            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js",
             "Redux", "Zustand", "Context API",
             "TanStack Query (React Query)", "React Hook Form + Zod/Yup",
             "HTML5", "CSS3", "Sass/SCSS",
@@ -707,7 +707,7 @@ export const content: Record<Language, Content> = {
         {
           name: "التطوير والبرمجة",
           items: [
-            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js", 
+            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js",
             "Redux", "Zustand", "Context API",
             "TanStack Query (React Query)", "React Hook Form + Zod/Yup",
             "HTML5", "CSS3", "Sass/SCSS",
@@ -926,8 +926,8 @@ export const content: Record<Language, Content> = {
       categories: [
         {
           name: "Разработка",
-           items: [
-            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js", 
+          items: [
+            "JavaScript (ES6+)", "TypeScript", "React", "React Native", "Next.js",
             "Redux", "Zustand", "Context API",
             "TanStack Query (React Query)", "React Hook Form + Zod/Yup",
             "HTML5", "CSS3", "Sass/SCSS",
